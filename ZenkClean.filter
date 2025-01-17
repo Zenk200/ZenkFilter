@@ -11,7 +11,7 @@
 
 # NeverSink's Indepth Loot Filter 0.2.1 - Modified by Zenk - Tested with WillyWonka_HC @twitch.tv
 
-# This specific "clean" filter filters out magic/white bases, all advanced items, orbs of augmentations, and charms.
+# This specific "clean" filter filters out most magic/white bases, all advanced items, orbs of augmentations, and charms.
 
 #HIDE AUGS
 Hide
