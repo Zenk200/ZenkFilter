@@ -5,13 +5,13 @@
 #        ███████╗███████╗██║ ╚████║██║  ██╗
 #        ╚══════╝╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝
 
-# v0.2.3
+# v0.2.3a
 
 # An attempt to make a minimal and chill filter - with everything you need
 
 # NeverSink's Indepth Loot Filter 0.2.1 - Modified by Zenk - Tested with WillyWonka_HC @twitch.tv
 
-
+# This specific "strict" filter filters out all advanced items, and shows only thes best bases.
 
 #BASES
 
@@ -130,133 +130,6 @@ BaseType "Expert Slicing Quarterstaff" "Expert Crescent Quarterstaff" "Expert Go
 # AreaLevel >= 75
 # Rarity <= Rare
 # BaseType ""
-
-
-
-
-
-
-# HIGHLIGHTING BEST BASES IN T11+ MAPS
-
-
-# ARMOR
-
-# Head
-# Show
-# AreaLevel >= 75
-# Rarity <= Rare
-# BaseType "Expert Elite Greathelm" "Expert Hunter Hood" "Expert Feathered Tiara" "Expert Shielded Helm" "Expert Heavy Crown" "Expert Tribal Mask"
-# SetBorderColor 142 142 230
-
-# DO NOT UNCOMMENT BASETYPE
-# Body
-# Show
-# AreaLevel >= 75
-# DropLevel >= 63
-# Rarity <= Rare
-# Class "Body Armours"
-# BaseType ""
-# SetBorderColor 142 142 230
-
-# Gloves
-# Show
-# AreaLevel >= 75
-# Rarity <= Rare
-# BaseType "Expert Linen Wraps" "Expert Aged Cuffs" "Expert Ringmail Gauntlets" "Expert Intricate Gloves" "Advanced Spined Bracers" "Expert Riveted Mitts"
-# SetBorderColor 142 142 230
-
-# Boots
-# Show
-# AreaLevel >= 75
-# Rarity <= Rare
-# BaseType "Expert Hunting Shoes" "Expert Pelt Leggings" "Expert Stacked Sabatons" "Expert Feathered Sandals" "Expert Lizardscale Boots" "Expert Stone Greaves"
-# SetBorderColor 142 142 230
-
-# Shield
-# Show
-# AreaLevel >= 75
-# Rarity <= Rare
-# BaseType "Expert Omen Crest Shield" "Expert Feathered Targe" "Expert Stone Tower Shield"
-# SetBorderColor 142 142 230
-
-# DO NOT UNCOMMENT BASETYPE
-# Foci
-# Show
-# AreaLevel >= 75
-# DropLevel >= 63
-# Rarity <= Rare
-# Class "Foci"
-# BaseType "Expert Plumed Focus"
-# SetBorderColor 142 142 230
-
-
-#WEAPONS
-
-# 1h Maces
-# Show
-# AreaLevel >= 75
-# Rarity <= Rare
-# BaseType "Expert Construct Hammer" "Expert Warpick" "Expert Smithing Hammer"
-# SetBorderColor 142 142 230
-
-# 2h Maces
-# Show
-# AreaLevel >= 75
-# Rarity <= Rare
-# BaseType "Expert Crumbling Maul" "Expert Cultist Greathammer" "Expert Oak Greathammer" "Expert Leaden Greathammer"
-# SetBorderColor 142 142 230
-
-# Crossbows
-# Show
-# AreaLevel >= 75
-# Rarity <= Rare
-# BaseType "Expert Bombard Crossbow" "Expert Dyad Crossbow" "Expert Tense Crossbow" "Expert Forlorn Crossbow"
-# SetBorderColor 142 142 230
-
-# DO NOT UNCOMMENT BASETYPE
-# Sceptres
-# Show
-# AreaLevel >= 75
-# DropLevel >= 63
-# Rarity <= Rare
-# Class "Sceptres"
-# BaseType ""
-# SetBorderColor 142 142 230
-
-# Bows
-# Show
-# AreaLevel >= 75
-# Rarity <= Rare
-# BaseType "Expert Cultist Bow" "Expert Dualstring Bow" "Expert Zealot Bow" "Expert Warden Bow"
-# SetBorderColor 142 142 230
-
-# Quarterstaves
-# Show
-# AreaLevel >= 75
-# Rarity <= Rare
-# BaseType "Expert Barrier Quarterstaff" "Expert Crackling Quarterstaff" "Expert Long Quarterstaff"
-# SetBorderColor 142 142 230
-
-# DO NOT UNCOMMENT BASETYPE
-# Wands
-# Show
-# AreaLevel >= 75
-# DropLevel >= 63
-# Rarity <= Rare
-# Class "Wands"
-# BaseType ""
-# SetBorderColor 142 142 230
-
-# DO NOT UNCOMMENT BASETYPE
-# Staves
-# Show
-# AreaLevel >= 75
-# DropLevel >= 63
-# Rarity <= Rare
-# Class "Staves"
-# BaseType ""
-# SetBorderColor 142 142 230
-
 
 
 # UNCUT GEMS
@@ -698,30 +571,6 @@ AreaLevel >= 65
 Rarity <= Magic
 Class "Flasks"
 
-Hide
-AreaLevel >= 77
-Rarity <= Rare
-DropLevel < 65
-Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
-
-Hide
-AreaLevel > 75
-Rarity <= Rare
-DropLevel < 64
-Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
-
-Hide
-AreaLevel > 73
-Rarity <= Magic
-DropLevel < 63
-Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
-
-Hide
-AreaLevel > 72
-Rarity <= Magic
-DropLevel < 63
-Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
-
 # Quivers have some relevant bases at 50+ so we treat them different
 Hide
 AreaLevel > 74
@@ -731,7 +580,7 @@ Class "Quivers"
 
 Hide
 AreaLevel >= 65
-Rarity <= Magic
+Rarity <= Rare
 DropLevel < 63
 Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
 
