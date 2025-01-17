@@ -25,7 +25,6 @@ BaseType "Charm"
 Rarity <= Magic
 
 
-
 #BASES
 
 
@@ -298,7 +297,6 @@ BaseType == "Gold"
 Show
 BaseType == "Gold"
 
-
 #--------------------------
 # Socketables and Special Character Equipment
 #--------------------------
@@ -564,22 +562,6 @@ Rarity Magic
 SetBorderColor 0 0 200
 
 #--------------------------
-# Random Rares
-#--------------------------
-
-## Uncomment this rule to hide low level rares in high level zones
-
-# Hide
-# Rarity Rare
-# DropLevel < 50
-# AreaLevel > 72
-# SetFontSize 35
-
-Show
-Rarity Rare
-SetFontSize 35
-
-#--------------------------
 # Hide Rules (only high level), super light edition
 #--------------------------
 
@@ -600,6 +582,22 @@ AreaLevel >= 65
 Rarity <= Rare
 DropLevel < 63
 Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
+
+#--------------------------
+# Random Rares
+#--------------------------
+
+## Uncomment this rule to hide low level rares in high level zones
+
+# Hide
+# Rarity Rare
+# DropLevel < 50
+# AreaLevel > 72
+# SetFontSize 35
+
+Show
+Rarity Rare
+SetFontSize 35
 
 #--------------------------
 # OPTIONAL RULES
