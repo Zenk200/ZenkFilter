@@ -1,0 +1,635 @@
+#        ███████╗███████╗███╗   ██╗██╗  ██╗
+#        ╚══███╔╝██╔════╝████╗  ██║██║ ██╔╝
+#          ███╔╝ █████╗  ██╔██╗ ██║█████╔╝ 
+#         ███╔╝  ██╔══╝  ██║╚██╗██║██╔═██╗ 
+#        ███████╗███████╗██║ ╚████║██║  ██╗
+#        ╚══════╝╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝
+
+# v0.2.3a
+
+# An attempt to make a minimal and chill filter - with everything you need
+
+# NeverSink's Indepth Loot Filter 0.2.1 - Modified by Zenk - Tested with WillyWonka_HC @twitch.tv
+
+# This specific "clean" filter filters out magic/white bases, all advanced items, orbs of augmentations, and charms.
+
+#HIDE AUGS
+Hide
+AreaLevel >= 70
+Class "Currency"
+BaseType "Orb of Augmentation"
+
+Hide
+AreaLevel >= 70
+BaseType "Charm"
+Rarity <= Magic
+
+
+
+#BASES
+
+
+#HIGHLITING ILVL BASES
+
+Show
+ItemLevel >= 81
+Rarity <= Rare
+Class "Wands"
+SetBorderColor 36 110 86
+
+Show
+ItemLevel >= 81
+Rarity <= Rare
+Class "Sceptres"
+SetBorderColor 36 110 86
+
+
+
+#REMOVING WORST BASES WITH ONLY BEST REMAINING IN T11+ MAPS
+
+
+#ARMOR
+
+# Head
+# Hide
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType "Expert Spired Greathelm" "Expert Soldier Greathelm" "Expert Swathed Cap" "Expert Felt Cap" "Expert Chain Tiara" "Expert Wicker Tiara" "Expert Cowled Helm" "Expert Guarded Helm" "Expert Martyr Crown" "Expert Horned Crown" "Expert Veiled Mask" "Expert Face Mask"
+
+# DO NOT UNCOMMENT
+# Body
+# Hide
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType ""
+
+# Gloves
+# Hide
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType "Expert Jewelled Gloves" "Expert Rope Cuffs" "Expert Gauze Wraps"
+
+# Unique case, best evasion only gloves are Advanced Spined Bracers
+# Gloves
+# Show
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType "Advanced Spined Bracers"
+
+# Boots
+# Hide
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType "Expert Trimmed Greaves" "Expert Iron Greaves" "Expert Steeltoe Boots" "Expert Silk Slippers" "Expert Wrapped Sandals" "Expert Braced Sabatons" "Expert Mail Sabatons" "Expert Secured Leggings" "Expert Padded Leggings" "Expert Threaded Shoes" "Expert Frayed Shoes"
+
+# Shield
+# Hide
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType "Expert Rampart Tower Shield" "Expert Braced Tower Shield" "Expert Crescent Targe" "Expert Pelage Targe" "Expert Jingling Crest Shield" "Expert Sigil Crest Shield"
+
+# Foci
+# Hide
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType "Expert Crystal Focus" "Expert Antler Focus"
+
+#WEAPONS
+
+# 1h Maces
+# Hide
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType "Expert Brigand Mace" "Expert Plated Mace" "Expert Slim Mace"
+
+# 2h Maces
+# Hide
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType "Expert Temple Maul" "Expert Forge Maul"
+
+# Crossbows
+# Hide
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType "Expert Varnished Crossbow" "Expert Sturdy Crossbow"
+
+# DO NOT UNCOMMENT
+# Sceptres
+# Hide
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType ""
+
+# Bows
+# Hide
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType "Expert Composite Bow" "Expert Shortbow"
+
+# Quarterstaves
+# Hide
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType "Expert Slicing Quarterstaff" "Expert Crescent Quarterstaff" "Expert Gothic Quarterstaff"
+
+# DO NOT UNCOMMENT
+# Wands
+# Hide
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType ""
+
+# DO NOT UNCOMMENT
+# Staves
+# Hide
+# AreaLevel >= 75
+# Rarity <= Rare
+# BaseType ""
+
+
+# UNCUT GEMS
+
+Hide
+ItemLevel <= 18
+BaseType "Uncut Skill Gem"
+AreaLevel >= 78
+
+Hide
+BaseType "Uncut Support Gem"
+AreaLevel >= 78
+
+Show
+ItemLevel = 19
+BaseType "Uncut Skill Gem"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35
+PlayAlertSound 1 300
+MinimapIcon 1 Yellow Circle
+
+Show
+ItemLevel = 19
+BaseType "Uncut Spirit Gem"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35
+PlayAlertSound 3 300
+MinimapIcon 1 Yellow Circle
+
+Show
+ItemLevel = 20
+BaseType "Uncut Skill Gem" "Uncut Spirit Gem"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+# HIDING MAPS
+
+Hide
+BaseType "Waystone"
+AreaLevel >= 79
+WaystoneTier <= 11
+Rarity <= Rare
+
+Hide
+BaseType "Waystone"
+AreaLevel >= 78
+WaystoneTier <= 10
+Rarity <= Rare
+
+Hide
+BaseType "Waystone"
+AreaLevel >= 77
+WaystoneTier <= 9
+Rarity <= Rare
+
+Hide
+BaseType "Waystone"
+AreaLevel >= 76
+WaystoneTier <= 8
+Rarity <= Rare
+
+Hide
+BaseType "Waystone"
+AreaLevel >= 75
+WaystoneTier <= 7
+Rarity <= Rare
+
+Hide
+BaseType "Waystone"
+AreaLevel >= 74
+WaystoneTier <= 6
+Rarity <= Rare
+
+Hide
+BaseType "Waystone"
+AreaLevel >= 73
+WaystoneTier <= 5
+Rarity <= Rare
+
+Hide
+BaseType "Waystone"
+AreaLevel >= 72
+WaystoneTier <= 4
+Rarity <= Rare
+
+Hide
+BaseType "Waystone"
+AreaLevel >= 71
+WaystoneTier <= 3
+Rarity <= Rare
+
+Hide
+BaseType "Waystone"
+AreaLevel >= 70
+WaystoneTier <= 2
+Rarity <= Rare
+
+
+#--------------------------
+# Overrides - Uniques, Valuables
+#--------------------------
+
+Show
+Rarity Unique
+SetTextColor 175 96 37 255
+SetBorderColor 175 96 37 255
+SetBackgroundColor 53 13 13 255
+PlayAlertSound 3 300
+MinimapIcon 1 Brown Star
+
+## Divine Orb Style
+Show
+Class "Currency"
+BaseType "Mirror" "Divine" "Perfect Jeweller's Orb"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show
+BaseType == "Distilled Isolation" "Distilled Suffering"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+
+#--------------------------
+# Gold
+#--------------------------
+
+Hide
+AreaLevel >= 65
+StackSize < 100
+BaseType == "Gold"
+
+Show
+BaseType == "Gold"
+
+
+#--------------------------
+# Socketables and Special Character Equipment
+#--------------------------
+
+# Special A Tier - League specific socketables and jewels
+Show 
+BaseType "Soul Core" "Timeless"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+MinimapIcon 0 Cyan Diamond
+PlayAlertSound 2 300
+PlayEffect Cyan
+
+# Special Highlight - Breach Rings
+Show 
+Rarity Rare
+BaseType == "Breach Ring"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+MinimapIcon 1 Cyan Diamond
+PlayEffect Cyan
+PlayAlertSound 2 300
+
+Show 
+Rarity <= Magic
+BaseType == "Breach Ring"
+SetTextColor 0 240 190
+MinimapIcon 2 Cyan Diamond
+PlayEffect Cyan Temp
+
+# Special A Tier - Sanctum Relics
+Show 
+Class "Relic"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+MinimapIcon 1 Cyan Diamond
+
+# Special A Tier - Rare Jewels
+Show
+Class "Jewel"
+Rarity <= Rare
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+MinimapIcon 1 Cyan Diamond
+PlayEffect Cyan
+PlayAlertSound 2 300
+
+# Special B Tier - Any Runes and Charms
+Show
+AreaLevel <= 74
+BaseType "Rune"
+
+Hide
+AreaLevel > 74
+BaseType "Rune"
+
+Show
+BaseType "Charm"
+
+#--------------------------
+# Scroll of Wisdom High Level Hiding
+#--------------------------
+
+Hide
+BaseType "Scroll of Wisdom"
+AreaLevel >= 65
+Rarity <= Magic
+
+#--------------------------
+# Socketables and Special Character Equipment
+#--------------------------
+
+# Currency Tier A: Gemcutter, Annullment
+Show
+Class "Currency"
+BaseType "Orb of Annulment" "Orb of Chance" "Greater Jeweller's Orb" "Distilled Fear" "Distilled Despair"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35
+PlayAlertSound 1 300
+MinimapIcon 1 Yellow Circle
+
+# Currency Tier B: Exalt
+Show
+Class "Currency"
+BaseType "Exotic Coinage" "Exalted Orb" "Chaos Orb"
+SetTextColor 255 207 92
+SetBorderColor 255 207 92
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+MinimapIcon 1 Yellow Circle
+
+Show
+BaseType "Gold Key" "Silver Key" "Bronze Key"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+
+# Currency Tier B: Regal, Vaal ...
+Show
+Class "Currency"
+BaseType "Gemcutter's Prism" "Vaal Orb" "Lesser Jeweller's Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+MinimapIcon 2 White Circle
+
+Show
+Class "Currency"
+BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact" 
+SetBorderColor 205 237 97
+MinimapIcon 1 White Kite
+
+Show
+Class "Omen"
+BaseType "Omen of"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayEffect White
+MinimapIcon 2 White Circle
+
+Show
+Class "Currency"
+BaseType "Distilled" "Catalyst" "Essence of"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayEffect White
+MinimapIcon 2 White Circle
+
+# Currency Tier C: Vaal, Chaos, Exalt, Exotic
+Show
+AreaLevel >= 70
+Class "Currency"
+BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Chance Shard"
+SetTextColor 220 190 132
+
+# Currency Tier C: Vaal, Chaos, Exalt, Exotic
+Show
+Class "Currency"
+BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Chance Shard"
+SetTextColor 220 190 132
+
+Show
+Class "Currency"
+BaseType "Scroll of Wisdom" "Shard"
+
+# Unknown currency
+Show
+Class "Currency"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect Pink
+MinimapIcon 1 White Circle
+
+Show
+Class "Pinnacle Keys"
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 Yellow Square
+SetFontSize 40
+
+Show
+BaseType "Simulacrum" " Tablet" "Breachstone" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook" "Test of"
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+
+Show
+BaseType "Barya" "Ultimatum"
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80
+PlayEffect Grey
+
+#--------------------------
+# Waystones
+#--------------------------
+
+Show
+WaystoneTier < 10
+AreaLevel > 77
+BaseType "Waystone"
+Rarity <= Rare
+SetTextColor 255 255 255
+SetBorderColor 255 255 255
+MinimapIcon 1 White Circle
+
+Show
+WaystoneTier < 5
+AreaLevel > 74
+BaseType "Waystone"
+Rarity <= Rare
+SetTextColor 255 255 255
+SetBorderColor 255 255 255
+MinimapIcon 1 White Circle
+
+Show
+BaseType "Waystone"
+Rarity <= Rare
+SetTextColor 255 255 255
+SetBorderColor 255 255 255
+MinimapIcon 1 White Circle
+
+#--------------------------
+# Value Rares
+#--------------------------
+
+Show
+Class "Rings" "Amulets" "Belts"
+Rarity Rare
+SetTextColor 233 206 75
+SetBorderColor 233 206 75
+PlayEffect Yellow
+
+#--------------------------
+# Rings, Amulets, Belts
+#--------------------------
+
+Show
+Rarity Normal
+Class "Rings" "Amulets" "Belts"
+SetBorderColor 110 235 52
+
+Show
+Class "Rings" "Amulets" "Belts"
+Rarity Magic
+SetBorderColor 110 235 52
+
+#--------------------------
+# Salvagable Items
+#--------------------------
+
+Show
+AreaLevel < 70
+Sockets > 0
+Rarity Normal
+SetBorderColor 0 0 200
+
+Show
+AreaLevel < 70
+Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
+Quality > 1
+Rarity Normal
+SetBorderColor 0 0 200
+
+Show
+AreaLevel < 70
+Sockets > 0
+Rarity Magic
+SetBorderColor 0 0 200
+
+Show
+AreaLevel < 70
+Quality > 1
+Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
+Rarity Magic
+SetBorderColor 0 0 200
+
+#--------------------------
+# Random Rares
+#--------------------------
+
+## Uncomment this rule to hide low level rares in high level zones
+
+# Hide
+# Rarity Rare
+# DropLevel < 50
+# AreaLevel > 72
+# SetFontSize 35
+
+Show
+Rarity Rare
+SetFontSize 35
+
+#--------------------------
+# Hide Rules (only high level), super light edition
+#--------------------------
+
+Hide
+AreaLevel >= 65
+Rarity <= Magic
+Class "Flasks"
+
+# Quivers have some relevant bases at 50+ so we treat them different
+Hide
+AreaLevel > 74
+Rarity <= Magic
+DropLevel < 50
+Class "Quivers"
+
+Hide
+AreaLevel >= 65
+Rarity <= Rare
+DropLevel < 63
+Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
+
+#--------------------------
+# OPTIONAL RULES
+#--------------------------
+# TO ENABLE RULES, REMOVE THE # AT THE START OF THE LINE
+
+### OPTIONAL RULE: Hide random bases
+# REMOVE THE BASES YOU --DO-- WANT TO SEE BEFORE SETTING TO HIDE
+
+Hide
+Rarity <= Magic
+Class "Flasks" "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Staves" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
+AreaLevel >= 65
+
+### OPTIONAL RULE: REDUCES BACKGROUND ON LOW LEVEL BASES
+
+# Show
+# Rarity <= Magic
+# Class "Flasks" "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Staves" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
+# AreaLevel >= 65
+# DropLevel <= 50
+# SetBackgroundColor 0 0 0 125
+
+#--------------------------
+# Meta
+#--------------------------
+
+# If this thing crashes, time to update your filter!
+# This is here to prevent people to use this filter for AGES. Expert items will get removed eventually
+# Get a new filter from www.filterblade.xyz
+
+Show
+BaseType == "Expert Laced Boots"
